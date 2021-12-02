@@ -19,10 +19,12 @@ test('renders ONE error message if user enters less then 5 characters into first
     render(<ContactForm/>);
     const fNameField = screen.getByLabelText(/first name/i);
     userEvent.type(fNameField, "abc");
-    await waitFor(() => {
-        const fNameError = screen.getByText(/firstname must have at least 5 characters/i);
-        expect(fNameError).toBeInTheDocument();
-    })
+    const fNameError = screen.getByText(/firstname must have at least 5 characters/i);
+    expect(fNameError).toBeInTheDocument();
+    // await waitFor(() => {
+    //     const fNameError = screen.getByText(/firstname must have at least 5 characters/i);
+    //     expect(fNameError).toBeInTheDocument();
+    // })
 });
 
 test('renders THREE error messages if user enters no values into any fields.', async () => {
@@ -33,9 +35,17 @@ test('renders THREE error messages if user enters no values into any fields.', a
     expect(errors).toHaveLength(3);
 });
 
-// test('renders ONE error message if user enters a valid first name and last name but no email.', async () => {
-    
-// });
+test('renders ONE error message if user enters a valid first name and last name but no email.', async () => {
+    render(<ContactForm/>);
+    const fNameField = screen.getByLabelText(/first name/i);
+    const lNameField = screen.getByLabelText(/last name/i);
+    const button = screen.getByRole("button");
+    userEvent.type(fNameField, "alistair");
+    userEvent.type(lNameField, "theirin");
+    userEvent.click(button);
+    const error = screen.getAllByText(/error/i);
+    expect(error).toHaveLength(1);
+});
 
 // test('renders "email must be a valid email address" if an invalid email is entered', async () => {
     
