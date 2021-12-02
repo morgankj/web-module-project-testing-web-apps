@@ -44,8 +44,6 @@ As a developer, you will be writing tests for every component. As we've learned,
 - enter 100+ characters in the message field and completely submit your form - your input should go off the side of the "You Submitted" modal
 - enter only spaces in the name fields - you should still be able to submit your form 
 
-
-
 #### Complete a case that tests if:
 * [X] the component renders the contact form component without errors.
 * [ ] the header h1 element exists. Include three asserts, if the header is in the document, if the heads is truthy, if the header has the correct test content.
@@ -56,7 +54,6 @@ As a developer, you will be writing tests for every component. As we've learned,
 * [ ] the component renders the text *"lastName is a required field"* the form is submitted without a last name.
 * [ ] the component renders the firstname, lastname and email text when submitted with valued fields and does **not** render a message value when one is not entered into the message field.
 * [ ] renders all fields when the user submits with valid text filled in for all fields.
-
 
 ## Stretch goals
 - Look at your test cases in Understanding-questions and see if there are any that you have not completed.
