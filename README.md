@@ -57,7 +57,7 @@ As a developer, you will be writing tests for every component. As we've learned,
 - There is alot of state management within our component in this project! See if you can separate the form and error validation code into their own hooks.
 
 ## Submission Format
-- [ ] If this is your first time connecting a submission, authorize your github account within the codegrade assignment.
-- [ ] Connect your fork to Codegrade using the "Connect Git" button.
-- [ ] Find your newly created fork from the list and push your work to main.
-- [ ] Check this video for details: www.youtube.com/watch?v=fC2BO7dI6IQ
+- [X] If this is your first time connecting a submission, authorize your github account within the codegrade assignment.
+- [X] Connect your fork to Codegrade using the "Connect Git" button.
+- [X] Find your newly created fork from the list and push your work to main.
+- [X] Check this video for details: www.youtube.com/watch?v=fC2BO7dI6IQ
